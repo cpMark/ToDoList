@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="i1">1</integer>
+    <integer name="i6">6</integer>
+    <integer name="i4">4</integer>
+    <integer name="i2">2</integer>
+    <integer name="i8">8</integer>
+</resources>

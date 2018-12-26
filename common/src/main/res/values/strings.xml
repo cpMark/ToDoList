@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">common</string>
+    <string name="file_string_storage_occur_error">文件持久化存储异常</string>
+    <string name="read_file_occur_error">文件读取异常</string>
+    <string name="append_file_occur_error">文件追加出现异常</string>
+    <string name="response_data_is_null">响应数据为空</string>
+    <string name="def_cancel">取消</string>
+    <string name="def_confirm">确认</string>
+    <string name="def_view_tip_title">提示</string>
+    <string name="connect_error">网络连接出错</string>
+    <string name="connect_timeout">网络连接超时</string>
+    <string name="bad_network">网络异常</string>
+    <string name="parse_error">结果解析错误</string>
+    <string name="unknown_error">未知异常</string>
+</resources>

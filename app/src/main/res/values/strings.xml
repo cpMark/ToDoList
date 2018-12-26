@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ToDoList</string>
+    <string name="login_account">账号</string>
+    <string name="login_password">密码</string>
+    <string name="login">登陆</string>
+    <string name="register">注册</string>
+    <string name="key_user_id">key_user_id</string>
+    <string name="login_occur_error">登陆异常</string>
+    <string name="query_to_do_task_occur_error">查询待办任务出现异常</string>
+    <string name="add_todo_task">新增待办任务</string>
+</resources>

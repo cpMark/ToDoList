@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/x203"
+    android:layout_height="@dimen/y162"
+    android:background="@drawable/shape_popup_bg"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y13"
+        android:gravity="center"
+        android:text="@string/def_view_tip_title"
+        android:textColor="@color/view_tip_title" />
+
+    <TextView
+        android:id="@+id/tv_tip_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rl_container"
+        android:layout_below="@id/tv_title"
+        android:gravity="center"
+        android:textColor="@color/view_tip_content" />
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/y13"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/x13"
+        android:paddingRight="@dimen/x13">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="@dimen/x82"
+            android:layout_height="@dimen/y30"
+            android:layout_weight="@integer/i1"
+            android:background="@drawable/shape_tv_border0"
+            android:gravity="center"
+            android:text="@string/def_cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="@dimen/x82"
+            android:layout_height="@dimen/y30"
+            android:layout_alignParentRight="true"
+            android:layout_weight="@integer/i1"
+            android:background="@drawable/shape_tv_border1"
+            android:gravity="center"
+            android:text="@string/def_confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
