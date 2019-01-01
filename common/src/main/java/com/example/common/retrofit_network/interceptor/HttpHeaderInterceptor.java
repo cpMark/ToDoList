@@ -20,8 +20,8 @@ public class HttpHeaderInterceptor implements Interceptor {
                 .header("app_key", "appId")
                 .header("Authorization", tokenType + " " + accessToken)
                 .header("Content-Type", "application/json")
-                .addHeader("Connection", "close")
-                .addHeader("Accept-Encoding", "identity")
+                .header("Accept-Encoding", "identity")
+                .header("Connection", "close")
                 .build();
         return chain.proceed(request);
     }

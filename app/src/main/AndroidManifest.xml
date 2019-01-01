@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <!--登陆-->
+        <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +23,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity" />
+        <!--首页-->
+        <activity android:name=".main.MainActivity" />
+
+        <!--添加待办任务-->
+        <activity android:name=".task.add.AddTaskActivity"/>
     </application>
 
 </manifest>

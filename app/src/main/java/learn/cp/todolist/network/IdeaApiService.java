@@ -1,18 +1,17 @@
 package learn.cp.todolist.network;
 
 
-import com.example.common.okhttp_network.BaseBean;
 import com.example.common.retrofit_network.common.BasicResponse;
 
 import java.util.List;
 
 import io.reactivex.Observable;
-import retrofit2.Call;
+import learn.cp.todolist.login.UserBean;
+import learn.cp.todolist.task.query.ToDoItemBean;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 /**
@@ -52,18 +51,21 @@ public interface IdeaApiService {
     /**
      *  新增待办任务
      */
+    @FormUrlEncoded
     @POST("todo/insert/todoItem")
     Observable<BasicResponse<String>> insertToDoItem(@Field("userId")String userId, @Field("title")String title, @Field("content")String content);
 
     /**
      *  删除待办任务
      */
+    @FormUrlEncoded
     @POST("todo/delete/todoItem")
     Observable<BasicResponse<String>> deleteToDoItem(@Field("userId")String userId,@Field("toDoId")String toDoId);
 
     /**
      *  更新待办任务
      */
+    @FormUrlEncoded
     @POST("todo/update/todoItem")
     Observable<BasicResponse<String>> updateToDoItem(@Field("userId")String userId,@Field("toDoId")String toDoId,
                                                      @Field("title")String title, @Field("content")String content,

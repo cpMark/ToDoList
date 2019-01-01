@@ -24,13 +24,14 @@ import android.support.v4.app.Fragment;
 
 
 /**
- * Non-UI Fragment used to retain ViewModels.
+ * 无UIFragment实例，用于缓存Fragment信息
  */
 public class ViewModelHolder<VM> extends Fragment {
 
     private VM mViewModel;
 
-    public ViewModelHolder() { }
+    public ViewModelHolder() {
+    }
 
     public static <M> ViewModelHolder createContainer(@NonNull M viewModel) {
         ViewModelHolder<M> viewModelContainer = new ViewModelHolder<>();
@@ -44,7 +45,8 @@ public class ViewModelHolder<VM> extends Fragment {
         setRetainInstance(true);
     }
 
-    @Nullable public VM getViewmodel() {
+    @Nullable
+    public VM getViewmodel() {
         return mViewModel;
     }
 

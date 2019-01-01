@@ -29,6 +29,7 @@ public class RetrofitUtils {
         return new OkHttpClient.Builder()
                 .readTimeout(Constants.DEFAULT_TIMEOUT, TimeUnit.MILLISECONDS)
                 .connectTimeout(Constants.DEFAULT_TIMEOUT, TimeUnit.MILLISECONDS)
+                .retryOnConnectionFailure(true)
                 .addInterceptor(new LoggingInterceptor())
                 .addInterceptor(new HttpHeaderInterceptor())
                 .addNetworkInterceptor(new HttpCacheInterceptor())

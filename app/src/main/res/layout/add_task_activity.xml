@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".main.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -29,17 +29,6 @@
             android:id="@+id/fl_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/y15"
-            android:src="@mipmap/add"
-            app:elevation="@dimen/x5"
-            android:id="@+id/main_fab_todo_task_add"
-            app:fabSize="normal"
-            app:layout_anchor="@id/rv_todo"
-            app:layout_anchorGravity="bottom|right|end" />
     </android.support.design.widget.CoordinatorLayout>
 
 </LinearLayout>

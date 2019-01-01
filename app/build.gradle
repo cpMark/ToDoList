@@ -40,9 +40,6 @@ dependencies {
     //ARouter
     implementation 'com.alibaba:arouter-api:1.4.1'
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
-    //butterknife
-    implementation 'com.jakewharton:butterknife:8.8.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     //recyclerview start
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     //cardview

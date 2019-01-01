@@ -1,5 +1,6 @@
 package com.example.common.dialog;
 
+import android.app.Activity;
 import android.content.Context;
 
 import com.example.common.R;
@@ -34,6 +35,10 @@ public class DialogUtils {
      * 显示ProgressDialog
      */
     public void showProgress(Context context) {
+        if(context == null || ((Activity) context).isFinishing()){
+            return ;
+        }
+
         if (mProgressDialog == null) {
             mProgressDialog = new CustomProgressDialog.Builder(context)
                     .setTheme(R.style.ProgressDialogStyle)

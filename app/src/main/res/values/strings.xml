@@ -8,4 +8,8 @@
     <string name="login_occur_error">登陆异常</string>
     <string name="query_to_do_task_occur_error">查询待办任务出现异常</string>
     <string name="add_todo_task">新增待办任务</string>
+    <string name="title_hint">待办事项标题</string>
+    <string name="description_hint">待办事项内容</string>
+    <string name="add_task_params_occur_error">新增待办任务参数异常</string>
+    <string name="add_to_do_task_occur_error">新增待办任务出现异常</string>
 </resources>

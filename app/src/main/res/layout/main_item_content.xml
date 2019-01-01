@@ -1,47 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="@dimen/x8"
-    android:layout_margin="@dimen/x10">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="learn.cp.todolist.task.query.ToDoItemBean"/>
+        <variable
+            name="todoItem"
+            type="learn.cp.todolist.task.query.ToDoItemBean"/>
+    </data>
 
-    <RelativeLayout
-        android:padding="@dimen/x5"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x10"
+        app:cardCornerRadius="@dimen/x8">
 
-        <TextView
-            android:id="@+id/main_tv_todo_priority"
-            android:layout_width="@dimen/x30"
-            android:layout_height="@dimen/x30"
-            android:layout_alignParentRight="true"
-            android:gravity="center"
-            android:textColor="@color/main_color0"
-            android:textSize="@dimen/y15" />
-
-        <TextView
-            android:id="@+id/main_tv_todo_title"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x30"
-            android:maxLines="@integer/i1"
-            android:ellipsize="end"
-            android:gravity="center_vertical"
-            android:layout_marginLeft="@dimen/x10"
-            android:layout_marginRight="@dimen/x10"
-            android:layout_toLeftOf="@id/main_tv_todo_priority"
-            android:textColor="@color/view_tip_title"
-            android:textSize="@dimen/y15"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x5">
 
-        <TextView
-            android:id="@+id/main_tv_todo_content"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/y150"
-            android:layout_marginLeft="@dimen/x10"
-            android:layout_marginRight="@dimen/x10"
-            android:gravity="center" />
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/main_tv_todo_priority"
+                android:layout_width="@dimen/x30"
+                android:layout_height="@dimen/x30"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text='@{String.valueOf(todoItem.priority)}'
+                android:textColor="@color/main_color0"
+                android:textSize="@dimen/y15" />
+
+            <TextView
+                android:id="@+id/main_tv_todo_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x30"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_toLeftOf="@id/main_tv_todo_priority"
+                android:ellipsize="end"
+                android:text="@{todoItem.title}"
+                android:gravity="center_vertical"
+                android:maxLines="@integer/i1"
+                android:textColor="@color/view_tip_title"
+                android:textSize="@dimen/y15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/main_tv_todo_content"
+                android:layout_width="match_parent"
+                android:text="@{todoItem.content}"
+                android:layout_height="@dimen/y150"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:gravity="center" />
+        </RelativeLayout>
 
 
-</android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>
+</layout>

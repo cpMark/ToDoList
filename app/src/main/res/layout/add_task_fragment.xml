@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="learn.cp.todolist.task.add.AddTaskViewModel" />
+
+        <variable
+            name="addViewModel"
+            type="AddTaskViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/add_task_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/title_hint"
+            android:maxLines="1"
+            android:text="@={addViewModel.title}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <EditText
+            android:layout_below="@id/add_task_title"
+            android:id="@+id/add_task_description"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:gravity="top"
+            android:hint="@string/description_hint"
+            android:text="@={addViewModel.content}" />
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_below="@id/add_task_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/y10"
+            android:onClick="@{addViewModel.confirmSubmitNewTask}"
+            android:src="@drawable/ic_done"
+            app:elevation="@dimen/x5"
+            app:fabSize="normal" />
+
+    </RelativeLayout>
+
+</layout>

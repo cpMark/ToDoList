@@ -28,5 +28,5 @@ public interface Constants {
     /**
      * 地址
      */
-    String HOST = "http://xxx/todolist/";
+    String HOST = "http://localhost:8080/todolist/";
 }
